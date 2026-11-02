@@ -24,6 +24,7 @@
     <PackageProjectUrl>https://github.com/icysky/ofdrw-net</PackageProjectUrl>
     <RepositoryUrl>https://github.com/icysky/ofdrw-net</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
+    <RepositoryCommit Condition="'$(GITHUB_SHA)' != ''">$(GITHUB_SHA)</RepositoryCommit>
     <PackageTags>ofd;ofdrw;pdf;ofd-reader;electronic-signature</PackageTags>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageReleaseNotes>Initial NuGet release (0.1.0).</PackageReleaseNotes>
