@@ -3,7 +3,7 @@ param(
     [string]$ApiKey = $env:NUGET_API_KEY,
     [string]$Source = 'https://api.nuget.org/v3/index.json',
     [string]$PackageDirectory,
-    [string]$Version = '0.1.0',
+    [string]$Version = '0.1.1',
     [switch]$SkipDuplicate
 )
 

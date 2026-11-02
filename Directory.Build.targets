@@ -6,7 +6,7 @@
     <None Include="$(MSBuildThisFileDirectory)NOTICE" Pack="true" PackagePath="\" Link="NOTICE" />
     <None Include="$(MSBuildThisFileDirectory)THIRD-PARTY-NOTICES.md" Pack="true" PackagePath="\" Link="THIRD-PARTY-NOTICES.md" />
     <None Include="$(MSBuildThisFileDirectory)PORTING-NOTES.md" Pack="true" PackagePath="\" Link="PORTING-NOTES.md" />
-    <None Include="$(MSBuildThisFileDirectory)NUGET-README.md" Pack="true" PackagePath="\" Link="NUGET-README.md" />
+    <None Include="$(MSBuildThisFileDirectory)NUGET-README.md" Pack="true" PackagePath="README.md" Link="README.md" />
     <None Include="$(MSBuildThisFileDirectory)THIRD-PARTY-LICENSES\**" Pack="true" PackagePath="THIRD-PARTY-LICENSES\" Link="THIRD-PARTY-LICENSES\%(RecursiveDir)%(Filename)%(Extension)" />
   </ItemGroup>
 

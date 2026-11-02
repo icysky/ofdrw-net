@@ -1,6 +1,6 @@
 [CmdletBinding()]
 param(
-    [string]$Version = '0.1.0',
+    [string]$Version = '0.1.1',
     [string]$OutputDirectory
 )
 
@@ -54,7 +54,7 @@ foreach ($name in $expected) {
     try {
         $entries = @($zip.Entries | ForEach-Object { $_.FullName })
 
-        foreach ($required in @('LICENSE', 'NOTICE', 'NUGET-README.md', 'THIRD-PARTY-NOTICES.md', 'PORTING-NOTES.md')) {
+        foreach ($required in @('LICENSE', 'NOTICE', 'README.md', 'THIRD-PARTY-NOTICES.md', 'PORTING-NOTES.md')) {
             if ($entries -notcontains $required) {
                 throw "$($package.Name) is missing $required"
             }

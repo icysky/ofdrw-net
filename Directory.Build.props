@@ -8,7 +8,7 @@
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
     <InvariantGlobalization>false</InvariantGlobalization>
 
-    <Version>0.1.0</Version>
+    <Version>0.1.1</Version>
     <Product>ofdrwNet</Product>
     <Description>OFDRW 2.4.x 的 .NET 10 移植（生成/解析/编辑/签章/加密/OFD-A 归档）</Description>
 
@@ -20,7 +20,7 @@
     <Company>icysky</Company>
     <Copyright>Copyright (c) 2026 icysky and ofdrw contributors</Copyright>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <PackageReadmeFile>NUGET-README.md</PackageReadmeFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageProjectUrl>https://github.com/icysky/ofdrw-net</PackageProjectUrl>
     <RepositoryUrl>https://github.com/icysky/ofdrw-net</RepositoryUrl>
     <RepositoryType>git</RepositoryType>

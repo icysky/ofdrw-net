@@ -9,6 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <!-- 让元包具备一个空的兼容 lib 资产，避免部分 NuGet 客户端把元包视为“无可用框架资产” -->
+    <None Include="lib\net10.0\_._" Pack="true" PackagePath="lib/net10.0/_._" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Ofd.Core\Ofd.Core.csproj" />
     <ProjectReference Include="..\Ofd.Pkg\Ofd.Pkg.csproj" />
     <ProjectReference Include="..\Ofd.Reader\Ofd.Reader.csproj" />
