@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- 元包：不含代码，只把全部模块作为 NuGet 依赖 -->
+  <PropertyGroup>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <SuppressDependenciesWhenPacking>false</SuppressDependenciesWhenPacking>
+    <!-- 元包只有依赖、没有 lib，NU5128 属预期 -->
+    <NoWarn>$(NoWarn);NU5128</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ofd.Core\Ofd.Core.csproj" />
+    <ProjectReference Include="..\Ofd.Pkg\Ofd.Pkg.csproj" />
+    <ProjectReference Include="..\Ofd.Reader\Ofd.Reader.csproj" />
+    <ProjectReference Include="..\Ofd.Crypto\Ofd.Crypto.csproj" />
+    <ProjectReference Include="..\Ofd.Sign\Ofd.Sign.csproj" />
+    <ProjectReference Include="..\Ofd.Gm\Ofd.Gm.csproj" />
+    <ProjectReference Include="..\Ofd.Font\Ofd.Font.csproj" />
+    <ProjectReference Include="..\Ofd.Layout\Ofd.Layout.csproj" />
+    <ProjectReference Include="..\Ofd.Archive\Ofd.Archive.csproj" />
+    <ProjectReference Include="..\Ofd.Tool\Ofd.Tool.csproj" />
+  </ItemGroup>
+
+</Project>

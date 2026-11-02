@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <PackageReference Include="SkiaSharp" Version="3.119.0" />
+    <PackageReference Include="SkiaSharp.NativeAssets.Win32" Version="3.119.0" />
+    <PackageReference Include="SkiaSharp.NativeAssets.Linux" Version="3.119.0" />
+    <PackageReference Include="SkiaSharp.NativeAssets.macOS" Version="3.119.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ofd.Core\Ofd.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <!--
+      本地构建仍复制字体到输出；打包时只允许 Noto Serif SC（OFL）。
+      FangSong_GB2312.ttf 为商业字体，Pack=false，绝不进入 NuGet 包。
+    -->
+    <Content Include="Assets\FangSong\*.ttf" CopyToOutputDirectory="PreserveNewest" Pack="false" />
+
+    <!-- contentFiles：安装包后复制到消费项目输出目录，路径保持 Assets/NotoSerif/... -->
+    <Content Include="Assets\NotoSerif\*.ttf"
+             CopyToOutputDirectory="PreserveNewest"
+             Pack="true"
+             PackagePath="contentFiles/any/any/Assets/NotoSerif/"
+             PackageCopyToOutput="true" />
+    <Content Include="Assets\NotoSerif\OFL.txt"
+             CopyToOutputDirectory="PreserveNewest"
+             Pack="true"
+             PackagePath="contentFiles/any/any/Assets/NotoSerif/"
+             PackageCopyToOutput="true" />
+
+    <!-- 间接引用（OfdNet 元包）时复制字体到输出 -->
+    <None Include="buildTransitive\OfdNet.Font.targets"
+          Pack="true"
+          PackagePath="buildTransitive/" />
+  </ItemGroup>
+</Project>

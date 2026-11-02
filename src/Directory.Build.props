@@ -1,0 +1,64 @@
+<Project>
+
+  <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)..'))" />
+
+  <PropertyGroup>
+    <IsPackable>true</IsPackable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(MSBuildProjectName)' == 'Ofd.Core'">
+    <PackageId>OfdNet.Core</PackageId>
+    <Description>OFD 数据模型：文档结构、页面、图元、字体、签名、注释与动作。</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(MSBuildProjectName)' == 'Ofd.Pkg'">
+    <PackageId>OfdNet.Pkg</PackageId>
+    <Description>OFD 虚拟容器（OFDDir/DocDir/PagesDir/ResDir）与打包解包。</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(MSBuildProjectName)' == 'Ofd.Reader'">
+    <PackageId>OfdNet.Reader</PackageId>
+    <Description>OFD 读取、资源定位、内容抽取、关键字检索与旧版读取器。</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(MSBuildProjectName)' == 'Ofd.Crypto'">
+    <PackageId>OfdNet.Crypto</PackageId>
+    <Description>OFD 加密/解密（口令、证书、FEK）。</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(MSBuildProjectName)' == 'Ofd.Sign'">
+    <PackageId>OfdNet.Sign</PackageId>
+    <Description>OFD 数字签名、签章与验签（GB/T 35275、SES V1/V4/V5）。</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(MSBuildProjectName)' == 'Ofd.Gm'">
+    <PackageId>OfdNet.Gm</PackageId>
+    <Description>国密结构：SM2/SM3、国密证书与 SES 结构。</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(MSBuildProjectName)' == 'Ofd.Font'">
+    <PackageId>OfdNet.Font</PackageId>
+    <Description>OFD 字体度量（SkiaSharp）与宽度映射表；包含 Noto Serif SC（OFL）。</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(MSBuildProjectName)' == 'Ofd.Layout'">
+    <PackageId>OfdNet.Layout</PackageId>
+    <Description>OFD 排版引擎：Div 树、分段、虚拟页面与页面图元。</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(MSBuildProjectName)' == 'Ofd.Archive'">
+    <PackageId>OfdNet.Archive</PackageId>
+    <Description>OFD-A 合规检查（23 条规则）与转换（23 个处理器）。</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(MSBuildProjectName)' == 'Ofd.Tool'">
+    <PackageId>OfdNet.Tool</PackageId>
+    <Description>OFD 工具：文档合并、页面删除、裸文档构造。</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(MSBuildProjectName)' == 'OfdNet'">
+    <PackageId>OfdNet</PackageId>
+    <Description>OfdNet 元包：一次安装 OFD 读取、编辑、排版、签章、加密、OFD-A 与合并全部模块。</Description>
+  </PropertyGroup>
+
+</Project>

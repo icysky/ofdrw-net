@@ -1,0 +1,6 @@
+# 由 tools/javaprobe/run.ps1 生成（Java 侧 ofdrw + JDK）：SES V4 签章包结构摘要
+entry=Doc_0/Signs/Sign_0/Seal.esl
+entry=Doc_0/Signs/Sign_0/Signature.xml
+entry=Doc_0/Signs/Sign_0/SignedValue.dat
+entry=Doc_0/Signs/Signatures.xml
+signatures=1 type=Seal hasSealElement=1 sealFile=1 references=6 provider=ofdrw-sign

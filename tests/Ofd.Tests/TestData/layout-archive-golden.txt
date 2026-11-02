@@ -1,0 +1,22 @@
+﻿### layout
+pages=1
+docType=OFD
+page1.layers=1
+page1.layer[Body].blocks=3
+page1.text "Golden测试" size=5 bnd=31.7,25.4,24.719,7 font=true codes=1
+page1.text "second line" size=4 bnd=31.7,32.4,18.105,6 font=true codes=1
+page1.pageblock children=1
+page1/pb.path data="M 0 0 L 30 15" bnd=31.7,38.4,40,20 stroke=true fill=false
+
+
+### archive
+docType=OFD-A
+hasSignatures=False
+entry=Doc_0/
+entry=Doc_0/Document.xml
+entry=Doc_0/DocumentRes.xml
+entry=Doc_0/Pages/
+entry=Doc_0/Pages/Page_0/
+entry=Doc_0/Pages/Page_0/Content.xml
+entry=Doc_0/PublicRes.xml
+entry=OFD.xml

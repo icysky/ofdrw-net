@@ -1,0 +1,9 @@
+# 由 tools/javaprobe/run.ps1 生成（Java 侧 ofdrw + JDK）：加密包结构摘要
+entry=Doc_0/Pages/Page_0/content.dat
+entry=Doc_0/document.dat
+entry=Doc_0/publicres.dat
+entry=Encryptions.xml
+entry=decryptseed.dat
+entry=entriesmap.dat
+entry=ofd.dat
+encryptInfos=1 scope=All provider=ofdrw-crypto company=ofdrw.org seed=/decryptseed.dat map=/entriesmap.dat

@@ -1,0 +1,8 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\Ofd.Core\Ofd.Core.csproj" />
+    <ProjectReference Include="..\Ofd.Reader\Ofd.Reader.csproj" />
+    <ProjectReference Include="..\Ofd.Pkg\Ofd.Pkg.csproj" />
+    <ProjectReference Include="..\Ofd.Layout\Ofd.Layout.csproj" />
+  </ItemGroup>
+</Project>

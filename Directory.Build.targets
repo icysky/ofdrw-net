@@ -1,0 +1,13 @@
+<Project>
+
+  <!-- 所有 NuGet 包根目录统一附带许可证、归属声明和包说明 -->
+  <ItemGroup Condition="'$(IsPackable)' == 'true'">
+    <None Include="$(MSBuildThisFileDirectory)LICENSE" Pack="true" PackagePath="\" Link="LICENSE" />
+    <None Include="$(MSBuildThisFileDirectory)NOTICE" Pack="true" PackagePath="\" Link="NOTICE" />
+    <None Include="$(MSBuildThisFileDirectory)THIRD-PARTY-NOTICES.md" Pack="true" PackagePath="\" Link="THIRD-PARTY-NOTICES.md" />
+    <None Include="$(MSBuildThisFileDirectory)PORTING-NOTES.md" Pack="true" PackagePath="\" Link="PORTING-NOTES.md" />
+    <None Include="$(MSBuildThisFileDirectory)NUGET-README.md" Pack="true" PackagePath="\" Link="NUGET-README.md" />
+    <None Include="$(MSBuildThisFileDirectory)THIRD-PARTY-LICENSES\**" Pack="true" PackagePath="THIRD-PARTY-LICENSES\" Link="THIRD-PARTY-LICENSES\%(RecursiveDir)%(Filename)%(Extension)" />
+  </ItemGroup>
+
+</Project>

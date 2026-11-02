@@ -1,0 +1,7 @@
+# 由 tools/javaprobe/run.ps1 生成（Java 侧 ofdrw + JDK）：水印产物签名
+entry=Doc_0/Annots/
+entry=Doc_0/Annots/Annotations.xml
+entry=Doc_0/Annots/Page_0/
+entry=Doc_0/Annots/Page_0/Annot_0.xml
+page=1 annots=1
+annot type=Watermark visible=true blocks=63 bnd=0,0,260,347

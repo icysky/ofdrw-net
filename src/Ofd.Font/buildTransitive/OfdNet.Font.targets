@@ -1,0 +1,25 @@
+<Project>
+
+  <!--
+    让通过元包 OfdNet 间接引用 OfdNet.Font 的项目也能把 Noto 字体复制到输出目录。
+    NuGet 默认不会把间接依赖包的 contentFiles 复制到消费项目，这里用 buildTransitive 补上。
+  -->
+  <Target Name="OfdNetCopyFonts" AfterTargets="Build">
+    <ItemGroup>
+      <_OfdNetFontFiles Include="$(MSBuildThisFileDirectory)../contentFiles/any/any/Assets/NotoSerif/*.*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(_OfdNetFontFiles)"
+          DestinationFolder="$(OutDir)Assets/NotoSerif"
+          SkipUnchangedFiles="true" />
+  </Target>
+
+  <Target Name="OfdNetCopyFontsToPublish" AfterTargets="Publish">
+    <ItemGroup>
+      <_OfdNetPublishFontFiles Include="$(MSBuildThisFileDirectory)../contentFiles/any/any/Assets/NotoSerif/*.*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(_OfdNetPublishFontFiles)"
+          DestinationFolder="$(PublishDir)Assets/NotoSerif"
+          SkipUnchangedFiles="true" />
+  </Target>
+
+</Project>

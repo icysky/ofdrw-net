@@ -1,0 +1,45 @@
+name: Publish NuGet
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Package version (for example 0.1.0)
+        required: true
+        default: 0.1.0
+
+permissions:
+  contents: read
+
+jobs:
+  pack-and-publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.0.x"
+
+      - name: Pack and validate
+        shell: pwsh
+        run: ./tools/pack-nuget.ps1 -Version "${{ inputs.version }}"
+
+      - name: NuGet login (OIDC)
+        uses: NuGet/login@v1
+        id: login
+        with:
+          user: icysky
+
+      - name: Push packages
+        shell: pwsh
+        run: |
+          ./tools/publish-nuget.ps1 `
+            -ApiKey "${{ steps.login.outputs.NUGET_API_KEY }}" `
+            -Version "${{ inputs.version }}"

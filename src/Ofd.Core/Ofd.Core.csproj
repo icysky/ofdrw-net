@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- 地基：基础类型 / 轻量 Dom（dom4j 字节兼容）/ CT 对象模型。零第三方依赖。 -->
+  <ItemGroup>
+    <!-- 测试工程需要访问 Proxy/internal 成员做序列化与结构断言 -->
+    <InternalsVisibleTo Include="Ofd.Tests" />
+  </ItemGroup>
+</Project>

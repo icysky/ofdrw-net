@@ -1,0 +1,5 @@
+# 由 tools/javaprobe/run.ps1 生成（Java 侧 ofdrw + JDK）：签名包结构摘要
+entry=Doc_0/Signs/Sign_0/Signature.xml
+entry=Doc_0/Signs/Sign_0/SignedValue.dat
+entry=Doc_0/Signs/Signatures.xml
+signatures=1 type=Sign provider=ofdrw-sign method=1.2.156.10197.1.501 checkMethod=SM3 references=5 signedValue=1 seal=0 maxSignId=s001

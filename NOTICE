@@ -1,0 +1,25 @@
+ofdrwNet
+Copyright 2026 ofdrwNet contributors
+
+This product is a .NET port of OFD Reader & Writer (ofdrw):
+
+    https://gitee.com/ofdrw/ofdrw      (Gitee mirror, primary reference)
+    https://github.com/ofdrw/ofdrw     (original repository)
+    Copyright the ofdrw authors
+    Licensed under the Apache License, Version 2.0
+
+The port follows the module and class structure of ofdrw 2.4.0 and translates
+the Java sources to C# for .NET 10. Significant modifications include:
+
+  * Java to C# translation of all ported modules;
+  * cryptographic, font-metric and imaging operations re-implemented with
+    BouncyCastle.Cryptography and SkiaSharp instead of Java providers;
+  * additional test fixtures and golden baselines generated against both
+    the Java and the .NET implementations.
+
+A detailed list of added, modified and removed functionality is provided in
+PORTING-NOTES.md. Bundled third-party components and their licenses are listed
+in THIRD-PARTY-NOTICES.md.
+
+This NOTICE file is provided in accordance with Section 4(d) of the
+Apache License, Version 2.0.

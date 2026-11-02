@@ -1,0 +1,18 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Ofd.Archive/Ofd.Archive.csproj" />
+    <Project Path="src/Ofd.Core/Ofd.Core.csproj" />
+    <Project Path="src/Ofd.Crypto/Ofd.Crypto.csproj" />
+    <Project Path="src/Ofd.Font/Ofd.Font.csproj" />
+    <Project Path="src/Ofd.Gm/Ofd.Gm.csproj" />
+    <Project Path="src/Ofd.Layout/Ofd.Layout.csproj" />
+    <Project Path="src/Ofd.Pkg/Ofd.Pkg.csproj" />
+    <Project Path="src/Ofd.Reader/Ofd.Reader.csproj" />
+    <Project Path="src/Ofd.Sign/Ofd.Sign.csproj" />
+    <Project Path="src/Ofd.Tool/Ofd.Tool.csproj" />
+    <Project Path="src/OfdNet/OfdNet.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Ofd.Tests/Ofd.Tests.csproj" />
+  </Folder>
+</Solution>

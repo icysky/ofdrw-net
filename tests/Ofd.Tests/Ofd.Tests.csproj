@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="BouncyCastle.Cryptography" Version="2.7.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Ofd.Core\Ofd.Core.csproj" />
+    <ProjectReference Include="..\..\src\Ofd.Pkg\Ofd.Pkg.csproj" />
+    <ProjectReference Include="..\..\src\Ofd.Reader\Ofd.Reader.csproj" />
+    <ProjectReference Include="..\..\src\Ofd.Gm\Ofd.Gm.csproj" />
+    <ProjectReference Include="..\..\src\Ofd.Crypto\Ofd.Crypto.csproj" />
+    <ProjectReference Include="..\..\src\Ofd.Sign\Ofd.Sign.csproj" />
+    <ProjectReference Include="..\..\src\Ofd.Layout\Ofd.Layout.csproj" />
+    <ProjectReference Include="..\..\src\Ofd.Font\Ofd.Font.csproj" />
+    <ProjectReference Include="..\..\src\Ofd.Archive\Ofd.Archive.csproj" />
+    <ProjectReference Include="..\..\src\Ofd.Tool\Ofd.Tool.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Java 侧探针 golden 基准（tools/probe 生成，详见 docs/ofdrw-net10-highrisk-recheck.md） -->
+    <None Include="TestData\**" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- 测试串行执行：避免并行测试集把内存（尤其 SkiaSharp 非托管内存）打爆 -->
+    <None Update="xunit.runner.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>
